@@ -32,11 +32,11 @@ class FixturesViewController: UIViewController {
         self.view.backgroundColor = UIColor.backgroundBlue
         leaguesCollectionView.inputDataSource = Leagues.allLeagues
         
-        let filterButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: UIBarButtonItemStyle.done, target: self, action: #selector(filterButtonAction(sender:)))
-        self.navigationItem.setRightBarButtonItems([filterButton], animated: false)
+        let filterButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: .plain, target: self, action: #selector(filterButtonAction))
+        navigationItem.rightBarButtonItems = [filterButton]
     }
 
-    @objc func filterButtonAction(sender: UIBarButtonItem) {
+    @objc func filterButtonAction() {
         leaguesCollectionView.showOrHide(direction: .Vertical)
     }
 
