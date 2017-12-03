@@ -10,6 +10,7 @@ import UIKit
 
 class FixturesViewController: UIViewController {
 
+    @IBOutlet weak var leaguesCollectionView: LeaguesCollectionView!
     
     fileprivate var fixturesViewModel: FixturesViewModel!
     fileprivate var fixturesFlowController: FixturesFlowController!
@@ -23,9 +24,21 @@ class FixturesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setup()
     }
 
+    private func setup() {
+        
+        self.view.backgroundColor = UIColor.backgroundBlue
+        leaguesCollectionView.inputDataSource = Leagues.allLeagues
+        
+        let filterButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: UIBarButtonItemStyle.done, target: self, action: #selector(filterButtonAction(sender:)))
+        self.navigationItem.setRightBarButtonItems([filterButton], animated: false)
+    }
 
+    @objc func filterButtonAction(sender: UIBarButtonItem) {
+        leaguesCollectionView.showOrHide(direction: .Vertical)
+    }
 
+    
 }

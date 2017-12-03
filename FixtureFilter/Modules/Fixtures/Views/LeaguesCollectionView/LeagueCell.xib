@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="leagueCell" id="gTV-IL-0wX" customClass="LeagueCell" customModule="FixtureFilter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="80" height="100"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spain Contest Badge" translatesAutoresizingMaskIntoConstraints="NO" id="8qG-u5-TcC">
+                        <rect key="frame" x="15" y="5" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="ARO-HZ-s1C"/>
+                            <constraint firstAttribute="height" constant="50" id="DmH-1h-LXV"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Primera Division" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMJ-sn-202">
+                        <rect key="frame" x="5" y="60" width="70" height="35"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                        <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="8qG-u5-TcC" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="07s-Zh-Vd2"/>
+                <constraint firstAttribute="bottomMargin" secondItem="cMJ-sn-202" secondAttribute="bottom" constant="5" id="36w-dn-Wul"/>
+                <constraint firstItem="cMJ-sn-202" firstAttribute="top" secondItem="8qG-u5-TcC" secondAttribute="bottom" constant="5" id="8CA-AK-VLK"/>
+                <constraint firstItem="8qG-u5-TcC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="topMargin" constant="5" id="FNo-rh-XFU"/>
+                <constraint firstAttribute="trailing" secondItem="cMJ-sn-202" secondAttribute="trailing" constant="5" id="IFK-lt-HwB"/>
+                <constraint firstItem="cMJ-sn-202" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="tKf-68-aCu"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="150" height="104"/>
+            <connections>
+                <outlet property="cellImageView" destination="8qG-u5-TcC" id="Ktp-BB-t9D"/>
+                <outlet property="cellLabel" destination="cMJ-sn-202" id="9DL-w0-tRb"/>
+            </connections>
+            <point key="canvasLocation" x="33" y="78"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Spain Contest Badge" width="196" height="197"/>
+    </resources>
+</document>

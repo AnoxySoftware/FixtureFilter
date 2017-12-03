@@ -14,8 +14,7 @@ class FixturesFactory {
         
         let navigationController = UINavigationController()
         navigationController.isNavigationBarHidden = false
-        navigationController.navigationBar.backgroundColor = UIColor.navBarBlue
-        navigationController.navigationBar.tintColor = UIColor.white
+        navigationController.navigationBar.isTranslucent = false
         navigationController.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         let fixturesController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! FixturesViewController
