@@ -12,6 +12,7 @@ class FixturesViewController: UIViewController {
 
     @IBOutlet weak var leaguesCollectionView: LeaguesCollectionView!
     @IBOutlet weak var fixturesCollectionView: FixturesCollectionView!
+    @IBOutlet weak var fixturesCollectionTop: NSLayoutConstraint!
     
     fileprivate var fixturesViewModel: FixturesViewModel!
     fileprivate var fixturesFlowController: FixturesFlowController!
@@ -39,7 +40,7 @@ class FixturesViewController: UIViewController {
     }
 
     @objc func filterButtonAction() {
-        leaguesCollectionView.showOrHide(direction: .Vertical)
+        leaguesCollectionView.anim(with: fixturesCollectionView)
     }
 
     

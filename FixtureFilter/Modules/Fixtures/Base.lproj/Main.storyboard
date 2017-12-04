@@ -76,13 +76,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.11992981510926166" green="0.33075287534401332" blue="0.51524324878056849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YjV-kf-pgh" firstAttribute="top" secondItem="znG-8j-fjx" secondAttribute="bottom" id="86k-6c-B2Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YjV-kf-pgh" secondAttribute="trailing" id="BCH-Jt-xpi"/>
                             <constraint firstItem="YjV-kf-pgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eqz-DB-tLI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YjV-kf-pgh" secondAttribute="bottom" id="IOp-DM-PYd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="znG-8j-fjx" secondAttribute="trailing" id="JvV-LZ-NTq"/>
                             <constraint firstItem="znG-8j-fjx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RdL-QJ-rMd"/>
                             <constraint firstItem="znG-8j-fjx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="in0-Oq-fUi"/>
+                            <constraint firstItem="YjV-kf-pgh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" priority="750" constant="120" id="uYE-sg-Sdz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
