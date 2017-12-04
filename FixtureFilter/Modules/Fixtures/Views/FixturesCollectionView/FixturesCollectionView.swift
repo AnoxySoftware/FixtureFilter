@@ -23,7 +23,9 @@ class FixturesCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
         self.register(nib, forCellWithReuseIdentifier: "fixtureCell")
         
         self.backgroundColor = UIColor.clear
+        
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0
@@ -33,16 +35,16 @@ class FixturesCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.width, height: 80)
+    }
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return inputDataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return inputDataSource[section].fixtures.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.bounds.width, height: 60)
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -64,7 +66,8 @@ class FixturesCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fixtureCell", for: indexPath) as! FixtureCell
-        cell.config(fixture: inputDataSource[indexPath.section].fixtures[indexPath.row])
+        cell.config(fixture: inputDataSource[indexPath.section].fixtures[indexPath.row],
+                    prevDate: indexPath.row - 1 >= 0 ? inputDataSource[indexPath.section].fixtures[indexPath.row - 1].dateValue : nil)
         
         return cell
     }

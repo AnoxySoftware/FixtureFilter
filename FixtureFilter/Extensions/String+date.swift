@@ -23,4 +23,11 @@ extension String {
         let minutes = calendar.component(.minute, from: date)
         return "\(hour):\(minutes)"
     }
+    
+    func pretty() -> String {
+        guard let date = self.toDate() else {return ""}
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE dd MMMM"
+        return dateFormatter.string(from: date).capitalized
+    }
 }
