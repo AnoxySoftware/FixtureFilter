@@ -72,7 +72,17 @@ class FixturesViewController: UIViewController {
 
     @objc func filterButtonAction() {
         leaguesCollectionView.anim(with: fixturesCollectionView) {
-            self.leaguesTopConstraint.constant = self.leaguesTopConstraint.constant == 0 ? -self.leaguesCollectionView.frame.height : 0
+            
+            if self.leaguesTopConstraint.constant == 0 {
+                self.leaguesTopConstraint.constant = -self.leaguesCollectionView.frame.height
+                self.fixturesCollectionView.inputDataSource = self.fixturesViewModel.fixturesData
+                self.fixturesCollectionView.reloadData()
+            }
+            else {
+                self.leaguesTopConstraint.constant = 0
+                self.fixturesCollectionView.inputDataSource = self.fixturesViewModel.filteredData
+                self.fixturesCollectionView.reloadData()
+            }
         }
     }
 
