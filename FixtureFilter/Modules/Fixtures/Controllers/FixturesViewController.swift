@@ -11,6 +11,7 @@ import UIKit
 class FixturesViewController: UIViewController {
 
     @IBOutlet weak var leaguesCollectionView: LeaguesCollectionView!
+    @IBOutlet weak var fixturesCollectionView: FixturesCollectionView!
     
     fileprivate var fixturesViewModel: FixturesViewModel!
     fileprivate var fixturesFlowController: FixturesFlowController!
@@ -31,6 +32,7 @@ class FixturesViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.backgroundBlue
         leaguesCollectionView.inputDataSource = Leagues.allLeagues
+        fixturesCollectionView.inputDataSource = fixturesViewModel.fixturesData
         
         let filterButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: .plain, target: self, action: #selector(filterButtonAction))
         navigationItem.rightBarButtonItems = [filterButton]

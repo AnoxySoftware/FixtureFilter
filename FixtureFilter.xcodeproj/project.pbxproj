@@ -13,6 +13,10 @@
 		16B6597B1FD5214F00F033E0 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6597A1FD5214F00F033E0 /* Services.swift */; };
 		16B6597E1FD522E500F033E0 /* fixtures.json in Resources */ = {isa = PBXBuildFile; fileRef = 16B6597D1FD522E500F033E0 /* fixtures.json */; };
 		16B659801FD5260A00F033E0 /* String+date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6597F1FD5260A00F033E0 /* String+date.swift */; };
+		16B659821FD52CAA00F033E0 /* FixturesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659811FD52CAA00F033E0 /* FixturesCollectionView.swift */; };
+		16B659891FD52DB700F033E0 /* FixtureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659871FD52DB700F033E0 /* FixtureCell.swift */; };
+		16B6598A1FD52DB700F033E0 /* FixtureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16B659881FD52DB700F033E0 /* FixtureCell.xib */; };
+		16B6598C1FD53DC800F033E0 /* FixturesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B6598B1FD53DC800F033E0 /* FixturesHeaderView.swift */; };
 		16DEED391FD442720090C969 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DEED381FD442720090C969 /* AppDelegate.swift */; };
 		16DEED3E1FD442720090C969 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16DEED3C1FD442720090C969 /* Main.storyboard */; };
 		16DEED401FD442720090C969 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DEED3F1FD442720090C969 /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 		16B6597A1FD5214F00F033E0 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		16B6597D1FD522E500F033E0 /* fixtures.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fixtures.json; sourceTree = "<group>"; };
 		16B6597F1FD5260A00F033E0 /* String+date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+date.swift"; sourceTree = "<group>"; };
+		16B659811FD52CAA00F033E0 /* FixturesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesCollectionView.swift; sourceTree = "<group>"; };
+		16B659871FD52DB700F033E0 /* FixtureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixtureCell.swift; sourceTree = "<group>"; };
+		16B659881FD52DB700F033E0 /* FixtureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FixtureCell.xib; sourceTree = "<group>"; };
+		16B6598B1FD53DC800F033E0 /* FixturesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesHeaderView.swift; sourceTree = "<group>"; };
 		16DEED351FD442720090C969 /* FixtureFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FixtureFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16DEED381FD442720090C969 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16DEED3D1FD442720090C969 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +213,10 @@
 		16DEED5E1FD44C5C0090C969 /* FixturesCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				16B659811FD52CAA00F033E0 /* FixturesCollectionView.swift */,
+				16B659871FD52DB700F033E0 /* FixtureCell.swift */,
+				16B659881FD52DB700F033E0 /* FixtureCell.xib */,
+				16B6598B1FD53DC800F033E0 /* FixturesHeaderView.swift */,
 			);
 			path = FixturesCollectionView;
 			sourceTree = "<group>";
@@ -294,6 +306,7 @@
 				16B6597E1FD522E500F033E0 /* fixtures.json in Resources */,
 				16DEED431FD442720090C969 /* LaunchScreen.storyboard in Resources */,
 				16DEED401FD442720090C969 /* Assets.xcassets in Resources */,
+				16B6598A1FD52DB700F033E0 /* FixtureCell.xib in Resources */,
 				16DEED671FD451D60090C969 /* LeagueCell.xib in Resources */,
 				16DEED3E1FD442720090C969 /* Main.storyboard in Resources */,
 			);
@@ -366,12 +379,15 @@
 			files = (
 				16B659781FD51FD500F033E0 /* Fixture.swift in Sources */,
 				16DEED631FD44CC80090C969 /* LeagueModel.swift in Sources */,
+				16B659891FD52DB700F033E0 /* FixtureCell.swift in Sources */,
 				16DEED531FD4445D0090C969 /* FixturesFlowController.swift in Sources */,
 				16B6597B1FD5214F00F033E0 /* Services.swift in Sources */,
+				16B6598C1FD53DC800F033E0 /* FixturesHeaderView.swift in Sources */,
 				16B659801FD5260A00F033E0 /* String+date.swift in Sources */,
 				16DEED511FD4443B0090C969 /* FixturesViewController.swift in Sources */,
 				16B659721FD51EF500F033E0 /* FixturesModel.swift in Sources */,
 				16DEED551FD4446B0090C969 /* FixturesFactory.swift in Sources */,
+				16B659821FD52CAA00F033E0 /* FixturesCollectionView.swift in Sources */,
 				16DEED661FD451D60090C969 /* LeagueCell.swift in Sources */,
 				16DEED691FD45CC70090C969 /* UIView+animations.swift in Sources */,
 				16DEED391FD442720090C969 /* AppDelegate.swift in Sources */,

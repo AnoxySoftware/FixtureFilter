@@ -32,9 +32,54 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YjV-kf-pgh" customClass="FixturesCollectionView" customModule="FixtureFilter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="140" width="320" height="428"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WK5-KM-6dh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="50" height="60"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fixtureCell" id="SKA-cE-Cjc" customClass="FixtureCell" customModule="FixtureFilter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="R8V-pk-Zq0" customClass="FixturesHeaderView" customModule="FixtureFilter" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHh-Og-o9o">
+                                            <rect key="frame" x="20" y="20" width="280" height="35"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="zHh-Og-o9o" secondAttribute="bottom" constant="5" id="NY5-db-PlU"/>
+                                        <constraint firstItem="zHh-Og-o9o" firstAttribute="leading" secondItem="R8V-pk-Zq0" secondAttribute="leading" constant="20" id="Qbh-yy-RSU"/>
+                                        <constraint firstAttribute="trailing" secondItem="zHh-Og-o9o" secondAttribute="trailing" constant="20" id="aG1-kU-Jb2"/>
+                                        <constraint firstItem="zHh-Og-o9o" firstAttribute="top" secondItem="R8V-pk-Zq0" secondAttribute="top" constant="20" id="hJP-Ew-Lx3"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="headerLabel" destination="zHh-Og-o9o" id="D5K-KN-c5b"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.11992981510926166" green="0.33075287534401332" blue="0.51524324878056849" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="YjV-kf-pgh" firstAttribute="top" secondItem="znG-8j-fjx" secondAttribute="bottom" id="86k-6c-B2Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YjV-kf-pgh" secondAttribute="trailing" id="BCH-Jt-xpi"/>
+                            <constraint firstItem="YjV-kf-pgh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Eqz-DB-tLI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YjV-kf-pgh" secondAttribute="bottom" id="IOp-DM-PYd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="znG-8j-fjx" secondAttribute="trailing" id="JvV-LZ-NTq"/>
                             <constraint firstItem="znG-8j-fjx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RdL-QJ-rMd"/>
                             <constraint firstItem="znG-8j-fjx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="in0-Oq-fUi"/>
@@ -42,6 +87,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="fixturesCollectionView" destination="YjV-kf-pgh" id="6OJ-tv-FDd"/>
                         <outlet property="leaguesCollectionView" destination="znG-8j-fjx" id="VwG-vB-gxe"/>
                     </connections>
                 </viewController>

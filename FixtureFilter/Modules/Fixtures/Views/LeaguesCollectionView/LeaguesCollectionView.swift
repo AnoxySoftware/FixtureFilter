@@ -12,9 +12,7 @@ class LeaguesCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
     
     var inputDataSource: [LeagueModel] = []
     
-    
-    
-    
+        
     override func awakeFromNib() {
         delegate = self
         dataSource = self
