@@ -28,6 +28,11 @@ class LeagueCell: UICollectionViewCell {
         cellImageView.image = league.image
         cellLabel.text = league.name
         
+        handleRx()
+    }
+    
+    private func handleRx() {
+        
         isActive
             .asObservable()
             .subscribe(onNext: { (isActive) in
