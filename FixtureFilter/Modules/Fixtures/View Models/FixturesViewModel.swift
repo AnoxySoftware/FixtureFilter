@@ -10,7 +10,9 @@ import UIKit
 
 class FixturesViewModel {
     
-    init() {
-        
+    var fixturesData: [League] = []
+    
+    init(fixturesData: [League]) {
+        self.fixturesData = fixturesData
     }
 }

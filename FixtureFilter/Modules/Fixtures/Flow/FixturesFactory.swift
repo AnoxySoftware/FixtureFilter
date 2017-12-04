@@ -20,7 +20,9 @@ class FixturesFactory {
         let fixturesController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! FixturesViewController
         fixturesController.title = "Games"
         let fixturesFlowController = FixturesFlowController(navigationController: navigationController)
-        let viewModel = FixturesViewModel()
+        
+        let fixturesData = Services.getSampleData()
+        let viewModel = FixturesViewModel(fixturesData: fixturesData)
         
         fixturesController.assignDependencies(fixturesFlowController: fixturesFlowController, fixturesViewModel: viewModel)
         

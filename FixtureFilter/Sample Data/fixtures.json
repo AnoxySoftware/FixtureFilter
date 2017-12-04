@@ -1,0 +1,174 @@
+{
+  "data": [
+    {
+      "name": "Serie A",
+      "fixtures": [
+          {
+            "home":"AC Milan",
+            "away":"Juventus",
+            "date": "2018-01-08T11:30"
+          },
+          {
+            "home":"Inter Mediolan",
+            "away":"Fiorentina",
+            "date": "2018-01-08T20:45"
+          },
+          {
+            "home":"Inter Mediolan",
+            "away":"AC Milan",
+            "date": "2018-01-10T20:45"
+          }
+          ]
+    },
+    {
+      "name": "Eredivisie",
+      "fixtures": [
+          {
+            "home":"Ajax",
+            "away":"PSV Eindhoven",
+            "date": "2018-01-02T16:30"
+          },
+          {
+            "home":"Feyernoord",
+            "away":"FC Utrecht",
+            "date": "2018-01-08T20:45"
+          },
+          {
+            "home":"Feyernoord",
+            "away":"Ajax",
+            "date": "2018-01-08T18:45"
+          }
+          ]
+    },
+    {
+      "name": "Premier League",
+      "fixtures": [
+          {
+            "home":"Manchester United",
+            "away":"Liverpool",
+            "date": "2018-01-01T16:30"
+          },
+          {
+            "home":"Chelsea",
+            "away":"Liverpool",
+            "date": "2018-01-02T20:45"
+          },
+          {
+            "home":"Arsenal",
+            "away":"Everton",
+            "date": "2018-01-05T18:45"
+          }
+          ]
+    },
+    {
+      "name": "Ligue 1",
+      "fixtures": [
+          {
+            "home":"PSG",
+            "away":"Olympique Lyon",
+            "date": "2018-01-03T16:30"
+          },
+          {
+            "home":"FC Nantes",
+            "away":"PSG",
+            "date": "2018-01-04T20:45"
+          },
+          {
+            "home":"AS Monaco",
+            "away":"Olympique Lyon",
+            "date": "2018-01-09T18:45"
+          }
+          ]
+    },
+    {
+      "name": "MLS",
+      "fixtures": [
+          {
+            "home":"Los Angeles Galaxy",
+            "away":"NY Red Bulls",
+            "date": "2018-01-04T16:30"
+          },
+          {
+            "home":"Toronto",
+            "away":"Los Angeles Galaxy",
+            "date": "2018-01-04T20:45"
+          },
+          {
+            "home":"NY Red Bulls",
+            "away":"Toronto",
+            "date": "2018-01-09T18:45"
+          }
+          ]
+    },
+    {
+      "name": "Saudi League",
+      "fixtures": [
+          {
+            "home":"Al-Hilal",
+            "away":"An-Nassr",
+            "date": "2018-01-03T16:30"
+          },
+          {
+            "home":"Al-Hilal",
+            "away":"Al-Raed",
+            "date": "2018-01-08T20:45"
+          },
+          {
+            "home":"An-Nassr",
+            "away":"Al-Hilal",
+            "date": "2018-01-10T18:45"
+          }
+          ]
+    },
+    {
+      "name": "Primera Division",
+      "fixtures": [
+          {
+            "home":"Real Madrid",
+            "away":"Atletico Madrid",
+            "date": "2018-01-04T16:30"
+          },
+          {
+            "home":"FC Barcelona",
+            "away":"Real Madrid",
+            "date": "2018-01-06T20:45"
+          },
+          {
+            "home":"Valencia CF",
+            "away":"Sevilla FC",
+            "date": "2018-01-08T18:45"
+          }
+          ]
+    },
+    {
+      "name": "Champions League",
+      "fixtures": [
+          {
+            "home":"Real Madrid",
+            "away":"Manchester United",
+            "date": "2018-01-02T16:30"
+          },
+          {
+            "home":"FC Barcelona",
+            "away":"AC Milan",
+            "date": "2018-01-02T20:45"
+          },
+          {
+            "home":"Chelsea",
+            "away":"Sevilla FC",
+            "date": "2018-01-09T18:45"
+          },
+          {
+            "home":"Inter Mediolan",
+            "away":"Ajax",
+            "date": "2018-01-09T20:45"
+          },
+          {
+            "home":"PSG",
+            "away":"Juventus",
+            "date": "2018-01-16T16:45"
+          }
+          ]
+    }
+  ]
+}
