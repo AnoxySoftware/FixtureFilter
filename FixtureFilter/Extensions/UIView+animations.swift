@@ -41,7 +41,7 @@ extension UIView
     }
     
     
-    func anim(with view: UIView) {
+    func anim(with view: UIView, onCompleted: @escaping () -> Void) {
         
         let shouldShow = self.frame.origin.y == 0 ? false : true
         
@@ -61,6 +61,7 @@ extension UIView
                                 height: view.frame.height)
         },completion: { _ in
             view.frame.size.height = shouldShow == false ? view.frame.height + self.frame.height : view.frame.height - self.frame.height
+            onCompleted()
         })
     }
     

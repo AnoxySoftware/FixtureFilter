@@ -17,6 +17,8 @@ class LeaguesCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         delegate = self
         dataSource = self
         
+        self.allowsMultipleSelection = true
+        
         let nib = UINib(nibName: "LeagueCell", bundle: nil)
         self.register(nib, forCellWithReuseIdentifier: "leagueCell")
         

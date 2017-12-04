@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class LeagueCell: UICollectionViewCell {
 
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
     
-    
+    let isActive = Variable<Bool>(false)
+    private let cellbag = DisposeBag()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +27,13 @@ class LeagueCell: UICollectionViewCell {
         
         cellImageView.image = league.image
         cellLabel.text = league.name
+        
+        isActive
+            .asObservable()
+            .subscribe(onNext: { (isActive) in
+                self.alpha = isActive ? 1 : 0.4
+            })
+            .disposed(by: cellbag)
     }
 
     override func prepareForReuse() {
