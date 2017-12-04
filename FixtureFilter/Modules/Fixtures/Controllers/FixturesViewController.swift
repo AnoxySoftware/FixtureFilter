@@ -49,16 +49,25 @@ class FixturesViewController: UIViewController {
         leaguesCollectionView.rx.itemSelected
             .subscribe(onNext: { [weak self] (indexPath) in
                 let cell = self?.leaguesCollectionView.cellForItem(at: indexPath) as! LeagueCell
+                let league = cell.leagueName
                 cell.isActive.value = true
+                self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: true)
+                self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
+                self?.fixturesCollectionView.reloadData()
             })
             .disposed(by: mainBag)
         
         leaguesCollectionView.rx.itemDeselected
             .subscribe(onNext: { [weak self] (indexPath) in
                 let cell = self?.leaguesCollectionView.cellForItem(at: indexPath) as! LeagueCell
+                let league = cell.leagueName
                 cell.isActive.value = false
+                self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
+                self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
+                self?.fixturesCollectionView.reloadData()
             })
             .disposed(by: mainBag)
+        
     }
 
     @objc func filterButtonAction() {

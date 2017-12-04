@@ -15,6 +15,8 @@ class LeagueCell: UICollectionViewCell {
     @IBOutlet weak var cellImageView: UIImageView!
     @IBOutlet weak var cellLabel: UILabel!
     
+    var leagueName: String = ""
+    
     let isActive = Variable<Bool>(false)
     private let cellbag = DisposeBag()
     
@@ -25,6 +27,7 @@ class LeagueCell: UICollectionViewCell {
     
     func config(league: LeagueModel) {
         
+        leagueName = league.name
         cellImageView.image = league.image
         cellLabel.text = league.name
         
