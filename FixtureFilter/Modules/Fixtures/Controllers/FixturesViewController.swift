@@ -51,9 +51,7 @@ class FixturesViewController: UIViewController {
                 let cell = self?.leaguesCollectionView.cellForItem(at: indexPath) as! LeagueCell
                 let league = cell.leagueName
                 cell.isActive.value = true
-                self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: true)
-                self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
-                self?.fixturesCollectionView.reloadData()
+                self?.reloadFixtures(leagueName: league, isActive: true)
             })
             .disposed(by: mainBag)
         
@@ -63,26 +61,30 @@ class FixturesViewController: UIViewController {
                 let league = cell.leagueName
                 cell.isActive.value = false
                 
-                
                 if let sectionIndex = self?.fixturesViewModel.getSectionIndex(leagueName: league) {
                     
                     self?.fixturesCollectionView.removeSectionAnim(sectionIndex: sectionIndex, onCompleted: {
-                        self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
-                        self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
-                        self?.fixturesCollectionView.reloadData()
+                        self?.reloadFixtures(leagueName: league, isActive: false)
                     })
                 }
                 else {
-                    self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
-                    self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
-                    self?.fixturesCollectionView.reloadData()
+                    self?.reloadFixtures(leagueName: league, isActive: false)
                 }
-                
-                
-                
             })
             .disposed(by: mainBag)
         
+        fixturesCollectionView.rx.didScroll
+            .subscribe({ [weak self] _ in
+                self?.leaguesTopConstraint.constant = self!.fixturesCollectionView.contentOffset.y * (-1)
+            })
+            .disposed(by: mainBag)
+    }
+    
+    private func reloadFixtures(leagueName: String, isActive: Bool) {
+        
+        fixturesViewModel.fixturesFor(leagueName: leagueName, isActive: isActive)
+        fixturesCollectionView.inputDataSource = fixturesViewModel.filteredData
+        fixturesCollectionView.reloadData()
     }
 
     @objc func filterButtonAction() {
