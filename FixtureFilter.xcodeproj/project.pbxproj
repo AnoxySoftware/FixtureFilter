@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166FAF0F1FD6844E00857439 /* UICollectionView+animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166FAF0E1FD6844E00857439 /* UICollectionView+animations.swift */; };
 		16B659721FD51EF500F033E0 /* FixturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659711FD51EF500F033E0 /* FixturesModel.swift */; };
 		16B659761FD51FC400F033E0 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659751FD51FC400F033E0 /* League.swift */; };
 		16B659781FD51FD500F033E0 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659771FD51FD500F033E0 /* Fixture.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		166FAF0E1FD6844E00857439 /* UICollectionView+animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+animations.swift"; sourceTree = "<group>"; };
 		16B659711FD51EF500F033E0 /* FixturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesModel.swift; sourceTree = "<group>"; };
 		16B659751FD51FC400F033E0 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		16B659771FD51FD500F033E0 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				16DEED571FD444C10090C969 /* Colors+definitions.swift */,
 				16DEED681FD45CC70090C969 /* UIView+animations.swift */,
+				166FAF0E1FD6844E00857439 /* UICollectionView+animations.swift */,
 				16B6597F1FD5260A00F033E0 /* String+date.swift */,
 			);
 			path = Extensions;
@@ -380,6 +383,7 @@
 				16B659781FD51FD500F033E0 /* Fixture.swift in Sources */,
 				16DEED631FD44CC80090C969 /* LeagueModel.swift in Sources */,
 				16B659891FD52DB700F033E0 /* FixtureCell.swift in Sources */,
+				166FAF0F1FD6844E00857439 /* UICollectionView+animations.swift in Sources */,
 				16DEED531FD4445D0090C969 /* FixturesFlowController.swift in Sources */,
 				16B6597B1FD5214F00F033E0 /* Services.swift in Sources */,
 				16B6598C1FD53DC800F033E0 /* FixturesHeaderView.swift in Sources */,

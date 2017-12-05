@@ -35,4 +35,36 @@ extension UIView
             onCompleted()
         })
     }
+    
+    func hideLeft(onCompleted: @escaping () -> Void) {
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            
+            //for self
+            self.frame = CGRect(x: -self.frame.width,
+                                y: self.frame.origin.y,
+                                width: self.frame.width,
+                                height: self.frame.height)
+            self.alpha = 0
+
+        },completion: { _ in
+            onCompleted()
+        })
+    }
+    
+    func hideRight(onCompleted: @escaping () -> Void) {
+        
+        UIView.animate(withDuration: 0.2, delay: 0.0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            
+            //for self
+            self.frame = CGRect(x: 2 * self.frame.width,
+                                y: self.frame.origin.y,
+                                width: self.frame.width,
+                                height: self.frame.height)
+            self.alpha = 0
+            
+        },completion: { _ in
+            onCompleted()
+        })
+    }
 }

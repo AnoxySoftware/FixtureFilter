@@ -30,4 +30,11 @@ class FixturesViewModel {
             }
         }
     }
+    
+    func getSectionIndex(leagueName: String) -> Int? {
+        
+        guard let league = (fixturesData.filter{ $0.name == leagueName }).first else {return nil}
+        guard let sectionIndex = filteredData.index(of: league) else {return nil}
+        return sectionIndex
+    }
 }

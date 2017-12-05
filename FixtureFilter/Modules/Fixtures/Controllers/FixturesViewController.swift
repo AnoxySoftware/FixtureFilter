@@ -62,9 +62,24 @@ class FixturesViewController: UIViewController {
                 let cell = self?.leaguesCollectionView.cellForItem(at: indexPath) as! LeagueCell
                 let league = cell.leagueName
                 cell.isActive.value = false
-                self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
-                self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
-                self?.fixturesCollectionView.reloadData()
+                
+                
+                if let sectionIndex = self?.fixturesViewModel.getSectionIndex(leagueName: league) {
+                    
+                    self?.fixturesCollectionView.removeSectionAnim(sectionIndex: sectionIndex, onCompleted: {
+                        self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
+                        self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
+                        self?.fixturesCollectionView.reloadData()
+                    })
+                }
+                else {
+                    self?.fixturesViewModel.fixturesFor(leagueName: league, isActive: false)
+                    self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.filteredData
+                    self?.fixturesCollectionView.reloadData()
+                }
+                
+                
+                
             })
             .disposed(by: mainBag)
         
