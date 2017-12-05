@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		166FAF0F1FD6844E00857439 /* UICollectionView+animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166FAF0E1FD6844E00857439 /* UICollectionView+animations.swift */; };
+		166FAF121FD6C56600857439 /* FilterBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166FAF111FD6C56600857439 /* FilterBarItem.swift */; };
 		16B659721FD51EF500F033E0 /* FixturesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659711FD51EF500F033E0 /* FixturesModel.swift */; };
 		16B659761FD51FC400F033E0 /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659751FD51FC400F033E0 /* League.swift */; };
 		16B659781FD51FD500F033E0 /* Fixture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B659771FD51FD500F033E0 /* Fixture.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		166FAF0E1FD6844E00857439 /* UICollectionView+animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+animations.swift"; sourceTree = "<group>"; };
+		166FAF111FD6C56600857439 /* FilterBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterBarItem.swift; sourceTree = "<group>"; };
 		16B659711FD51EF500F033E0 /* FixturesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixturesModel.swift; sourceTree = "<group>"; };
 		16B659751FD51FC400F033E0 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
 		16B659771FD51FD500F033E0 /* Fixture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixture.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 				DF6151A288EC4FBA6AB35A5B /* Pods_FixtureFilter.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		166FAF101FD6C51900857439 /* FilterBarItem */ = {
+			isa = PBXGroup;
+			children = (
+				166FAF111FD6C56600857439 /* FilterBarItem.swift */,
+			);
+			path = FilterBarItem;
 			sourceTree = "<group>";
 		};
 		16B659791FD5213900F033E0 /* Services */ = {
@@ -197,6 +207,7 @@
 		16DEED5C1FD44C380090C969 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				166FAF101FD6C51900857439 /* FilterBarItem */,
 				16DEED5E1FD44C5C0090C969 /* FixturesCollectionView */,
 				16DEED5D1FD44C440090C969 /* LeaguesCollectionView */,
 			);
@@ -384,6 +395,7 @@
 				16DEED631FD44CC80090C969 /* LeagueModel.swift in Sources */,
 				16B659891FD52DB700F033E0 /* FixtureCell.swift in Sources */,
 				166FAF0F1FD6844E00857439 /* UICollectionView+animations.swift in Sources */,
+				166FAF121FD6C56600857439 /* FilterBarItem.swift in Sources */,
 				16DEED531FD4445D0090C969 /* FixturesFlowController.swift in Sources */,
 				16B6597B1FD5214F00F033E0 /* Services.swift in Sources */,
 				16B6598C1FD53DC800F033E0 /* FixturesHeaderView.swift in Sources */,

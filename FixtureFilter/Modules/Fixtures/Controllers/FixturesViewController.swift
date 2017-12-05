@@ -21,6 +21,8 @@ class FixturesViewController: UIViewController {
     
     private let mainBag = DisposeBag()
     
+    private let filterBarItem = FilterBarItem()
+    
     func assignDependencies(fixturesFlowController: FixturesFlowController, fixturesViewModel: FixturesViewModel) {
         
         self.fixturesFlowController = fixturesFlowController
@@ -40,8 +42,7 @@ class FixturesViewController: UIViewController {
         leaguesCollectionView.inputDataSource = Leagues.allLeagues
         fixturesCollectionView.inputDataSource = fixturesViewModel.fixturesData
         
-        let filterButton = UIBarButtonItem(image: UIImage(named: "filterIcon"), style: .plain, target: self, action: #selector(filterButtonAction))
-        navigationItem.rightBarButtonItems = [filterButton]
+        navigationItem.rightBarButtonItems = [filterBarItem]
     }
     
     private func handleRx() {
@@ -75,7 +76,26 @@ class FixturesViewController: UIViewController {
         
         fixturesCollectionView.rx.didScroll
             .subscribe({ [weak self] _ in
-                self?.leaguesTopConstraint.constant = self!.fixturesCollectionView.contentOffset.y * (-1)
+                
+                let offset = self!.fixturesCollectionView.contentOffset.y
+                if self?.filterBarItem.isActive.value == true && offset <= self!.leaguesCollectionView.frame.height {
+                    self?.leaguesTopConstraint.constant = -offset
+                }
+            })
+            .disposed(by: mainBag)
+        
+        filterBarItem.rx.tap
+            .subscribe({ [weak self] _ in
+                
+                if self?.filterBarItem.isActive.value == false && self!.leaguesTopConstraint.constant < 0 {
+                    
+                    self?.leaguesTopConstraint.constant = -self!.leaguesCollectionView.frame.height
+                    self?.fixturesCollectionView.inputDataSource = self!.fixturesViewModel.fixturesData
+                    self?.fixturesCollectionView.reloadData()
+                }
+                else {
+                    self?.filterButtonAction()
+                }
             })
             .disposed(by: mainBag)
     }
@@ -87,7 +107,7 @@ class FixturesViewController: UIViewController {
         fixturesCollectionView.reloadData()
     }
 
-    @objc func filterButtonAction() {
+    private func filterButtonAction() {
         leaguesCollectionView.anim(with: fixturesCollectionView) {
             
             if self.leaguesTopConstraint.constant == 0 {
