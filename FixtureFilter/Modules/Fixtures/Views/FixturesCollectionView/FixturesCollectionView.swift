@@ -13,8 +13,6 @@ class FixturesCollectionView: UICollectionView, UICollectionViewDelegate, UIColl
     var inputDataSource: [League] = []
     
     
-
-    
     override func awakeFromNib() {
         delegate = self
         dataSource = self
