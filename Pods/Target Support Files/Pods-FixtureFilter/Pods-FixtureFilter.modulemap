@@ -1,0 +1,6 @@
+framework module Pods_FixtureFilter {
+  umbrella header "Pods-FixtureFilter-umbrella.h"
+
+  export *
+  module * { export * }
+}
